@@ -26,10 +26,12 @@ Cargo_Representante varchar(40) not null,
 Regiao_de_Comercializacao char(1),
 Data_Registro_ANS datetime not null);
 
-LOAD data infile 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/Relatorio_cadop.csv' INTO TABLE operadora
+-- TROCAR O ENDERECO DAQUI PARA O CAMINHO DO ARQUIVO CERTO
+
+LOAD data infile 'C:/www/Github/testeNivelamento-3/data/Relatorio_cadop.csv' INTO TABLE operadora
 Fields terminated BY ';'
 OPTIONALLY ENCLOSED BY '"'
-lines terminated by '\n'
+lines terminated by '\r\n'
 ignore 1 Rows;
 
 select * FROM operadora;

@@ -13,29 +13,23 @@ SET GLOBAL net_write_timeout = 600;
 SET GLOBAL wait_timeout = 28800;
 SET GLOBAL interactive_timeout = 28800;
 
+delete from demoContabeis;
 
-LOAD data infile 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/1T2023.csv' INTO TABLE demoContabeis Fields terminated BY ';' OPTIONALLY ENCLOSED BY '"' lines terminated by '\n' ignore 1 Rows (DATA, REG_ANS, CD_CONTA_CONTABIL, DESCRICAO, @VL_SALDO_INICIAL, @VL_SALDO_FINAL) SET VL_SALDO_INICIAL = REPLACE(@VL_SALDO_INICIAL, ',', '.'), VL_SALDO_FINAL = REPLACE(@VL_SALDO_FINAL, ',', '.');
 
-LOAD data infile 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/2T2023.csv' INTO TABLE demoContabeis Fields terminated BY ';' OPTIONALLY ENCLOSED BY '"' lines terminated by '\n' ignore 1 Rows (DATA, REG_ANS, CD_CONTA_CONTABIL, DESCRICAO, @VL_SALDO_INICIAL, @VL_SALDO_FINAL) SET VL_SALDO_INICIAL = REPLACE(@VL_SALDO_INICIAL, ',', '.'), VL_SALDO_FINAL = REPLACE(@VL_SALDO_FINAL, ',', '.');
+LOAD data infile 'C:/www/Github/testeNivelamento-3/data/1T2023.csv' INTO TABLE demoContabeis Fields terminated BY ';' OPTIONALLY ENCLOSED BY '"' lines terminated by '\r\n' ignore 1 Rows (DATA, REG_ANS, CD_CONTA_CONTABIL, DESCRICAO, @VL_SALDO_INICIAL, @VL_SALDO_FINAL) SET VL_SALDO_INICIAL = REPLACE(@VL_SALDO_INICIAL, ',', '.'), VL_SALDO_FINAL = REPLACE(@VL_SALDO_FINAL, ',', '.');
 
-LOAD data infile 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/3T2023.csv' INTO TABLE demoContabeis Fields terminated BY ';' OPTIONALLY ENCLOSED BY '"' lines terminated by '\n' ignore 1 Rows(DATA, REG_ANS, CD_CONTA_CONTABIL, DESCRICAO, @VL_SALDO_INICIAL, @VL_SALDO_FINAL) SET VL_SALDO_INICIAL = REPLACE(@VL_SALDO_INICIAL, ',', '.'), VL_SALDO_FINAL = REPLACE(@VL_SALDO_FINAL, ',', '.');
+LOAD data infile 'C:/www/Github/testeNivelamento-3/data/2T2023.csv' INTO TABLE demoContabeis Fields terminated BY ';' OPTIONALLY ENCLOSED BY '"' lines terminated by '\r\n' ignore 1 Rows (DATA, REG_ANS, CD_CONTA_CONTABIL, DESCRICAO, @VL_SALDO_INICIAL, @VL_SALDO_FINAL) SET VL_SALDO_INICIAL = REPLACE(@VL_SALDO_INICIAL, ',', '.'), VL_SALDO_FINAL = REPLACE(@VL_SALDO_FINAL, ',', '.');
 
-LOAD data infile 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/4T2023.csv' INTO TABLE demoContabeis Fields terminated BY ';' OPTIONALLY ENCLOSED BY '"' lines terminated by '\n' ignore 1 Rows(DATA, REG_ANS, CD_CONTA_CONTABIL, DESCRICAO, @VL_SALDO_INICIAL, @VL_SALDO_FINAL) SET VL_SALDO_INICIAL = REPLACE(@VL_SALDO_INICIAL, ',', '.'), VL_SALDO_FINAL = REPLACE(@VL_SALDO_FINAL, ',', '.');
+LOAD data infile 'C:/www/Github/testeNivelamento-3/data/3T2023.csv' INTO TABLE demoContabeis Fields terminated BY ';' OPTIONALLY ENCLOSED BY '"' lines terminated by '\r\n' ignore 1 Rows (DATA, REG_ANS, CD_CONTA_CONTABIL, DESCRICAO, @VL_SALDO_INICIAL, @VL_SALDO_FINAL) SET VL_SALDO_INICIAL = REPLACE(@VL_SALDO_INICIAL, ',', '.'), VL_SALDO_FINAL = REPLACE(@VL_SALDO_FINAL, ',', '.');
 
-LOAD data infile 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/1T2024.csv' INTO TABLE demoContabeis Fields terminated BY ';' OPTIONALLY ENCLOSED BY '"' lines terminated by '\n' ignore 1 Rows(DATA, REG_ANS, CD_CONTA_CONTABIL, DESCRICAO, @VL_SALDO_INICIAL, @VL_SALDO_FINAL) SET VL_SALDO_INICIAL = REPLACE(@VL_SALDO_INICIAL, ',', '.'), VL_SALDO_FINAL = REPLACE(@VL_SALDO_FINAL, ',', '.');
+LOAD data infile 'C:/www/Github/testeNivelamento-3/data/4T2023.csv' INTO TABLE demoContabeis Fields terminated BY ';' OPTIONALLY ENCLOSED BY '"' lines terminated by '\r\n' ignore 1 Rows (DATA, REG_ANS, CD_CONTA_CONTABIL, DESCRICAO, @VL_SALDO_INICIAL, @VL_SALDO_FINAL) SET VL_SALDO_INICIAL = REPLACE(@VL_SALDO_INICIAL, ',', '.'), VL_SALDO_FINAL = REPLACE(@VL_SALDO_FINAL, ',', '.');
 
-LOAD data infile 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/2T2024.csv' INTO TABLE demoContabeis Fields terminated BY ';' OPTIONALLY ENCLOSED BY '"' lines terminated by '\n' ignore 1 Rows(DATA, REG_ANS, CD_CONTA_CONTABIL, DESCRICAO, @VL_SALDO_INICIAL, @VL_SALDO_FINAL) SET VL_SALDO_INICIAL = REPLACE(@VL_SALDO_INICIAL, ',', '.'), VL_SALDO_FINAL = REPLACE(@VL_SALDO_FINAL, ',', '.');
+LOAD data infile 'C:/www/Github/testeNivelamento-3/data/1T2024.csv' INTO TABLE demoContabeis Fields terminated BY ';' OPTIONALLY ENCLOSED BY '"' lines terminated by '\r\n' ignore 1 Rows (DATA, REG_ANS, CD_CONTA_CONTABIL, DESCRICAO, @VL_SALDO_INICIAL, @VL_SALDO_FINAL) SET VL_SALDO_INICIAL = REPLACE(@VL_SALDO_INICIAL, ',', '.'), VL_SALDO_FINAL = REPLACE(@VL_SALDO_FINAL, ',', '.');
 
-LOAD data infile 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/3T2024.csv' INTO TABLE demoContabeis Fields terminated BY ';' OPTIONALLY ENCLOSED BY '"' lines terminated by '\n' ignore 1 Rows(DATA, REG_ANS, CD_CONTA_CONTABIL, DESCRICAO, @VL_SALDO_INICIAL, @VL_SALDO_FINAL) SET VL_SALDO_INICIAL = REPLACE(@VL_SALDO_INICIAL, ',', '.'), VL_SALDO_FINAL = REPLACE(@VL_SALDO_FINAL, ',', '.');
+LOAD data infile 'C:/www/Github/testeNivelamento-3/data/2T2024.csv' INTO TABLE demoContabeis Fields terminated BY ';' OPTIONALLY ENCLOSED BY '"' lines terminated by '\r\n' ignore 1 Rows (DATA, REG_ANS, CD_CONTA_CONTABIL, DESCRICAO, @VL_SALDO_INICIAL, @VL_SALDO_FINAL) SET VL_SALDO_INICIAL = REPLACE(@VL_SALDO_INICIAL, ',', '.'), VL_SALDO_FINAL = REPLACE(@VL_SALDO_FINAL, ',', '.');
 
-LOAD data infile 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/4T2024.csv' INTO TABLE demoContabeis Fields terminated BY ';' OPTIONALLY ENCLOSED BY '"' lines terminated by '\n' ignore 1 Rows(DATA, REG_ANS, CD_CONTA_CONTABIL, DESCRICAO, @VL_SALDO_INICIAL, @VL_SALDO_FINAL) SET VL_SALDO_INICIAL = REPLACE(@VL_SALDO_INICIAL, ',', '.'), VL_SALDO_FINAL = REPLACE(@VL_SALDO_FINAL, ',', '.');
+LOAD data infile 'C:/www/Github/testeNivelamento-3/data/3T2024.csv' INTO TABLE demoContabeis Fields terminated BY ';' OPTIONALLY ENCLOSED BY '"' lines terminated by '\r\n' ignore 1 Rows (DATA, REG_ANS, CD_CONTA_CONTABIL, DESCRICAO, @VL_SALDO_INICIAL, @VL_SALDO_FINAL) SET VL_SALDO_INICIAL = REPLACE(@VL_SALDO_INICIAL, ',', '.'), VL_SALDO_FINAL = REPLACE(@VL_SALDO_FINAL, ',', '.');
 
-SELECT 
-    MIN(VL_SALDO_FINAL) as menorSaldo,
-    max(VL_SALDO_FINAL) as maiorSaldo,
-    DESCRICAO as descr
-FROM
-    demoContabeis
-    WHERE DESCRICAO = "EVENTOS/SINISTROS CONHECIDOS OU AVISADOS DE ASSISTÊNCIA À SAÚDE"
-    group by REG_ANS;
+LOAD data infile 'C:/www/Github/testeNivelamento-3/data/4T2024.csv' INTO TABLE demoContabeis Fields terminated BY ';' OPTIONALLY ENCLOSED BY '"' lines terminated by '\r\n' ignore 1 Rows (DATA, REG_ANS, CD_CONTA_CONTABIL, DESCRICAO, @VL_SALDO_INICIAL, @VL_SALDO_FINAL) SET VL_SALDO_INICIAL = REPLACE(@VL_SALDO_INICIAL, ',', '.'), VL_SALDO_FINAL = REPLACE(@VL_SALDO_FINAL, ',', '.');
+
     
